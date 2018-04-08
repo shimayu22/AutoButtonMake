@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let a = MakeButton(gamen: self, count: 5)
+        let a = MakeButton(gamen: self, count: 10)
         
         a.makeButton()
         

@@ -40,8 +40,23 @@ class MakeButton{
             //サイズ
             simpleButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
             
+            var x:Int
+            var y:Int
+            if i < 6 {
+                x = 20 + (i - 1) * 60
+                y = 100
+            } else if i < 11 {
+                x = 20 + (i - 6) * 60
+                y = 200
+            } else if i < 16 {
+                x = 20 + (i - 11) * 60
+                y = 300
+            } else {
+                x = 20 + (i - 10) * 60
+                y = 400
+            }
             //配置場所
-            simpleButton.layer.position = CGPoint(x: 20 + (i - 1) * 60, y: 20)
+            simpleButton.layer.position = CGPoint(x: x, y: y)
             
             //tagの番号
             simpleButton.tag = i
