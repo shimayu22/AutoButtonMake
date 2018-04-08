@@ -61,6 +61,8 @@ class MakeButton{
             //tagの番号
             simpleButton.tag = i
             
+            simpleButton.addTarget(self, action: #selector(ViewController.pushButton(_:)), for: .touchDown)
+            
             //ボタン表示
             gamen.view.addSubview(simpleButton)
             
