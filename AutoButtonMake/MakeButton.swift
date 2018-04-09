@@ -38,23 +38,33 @@ class MakeButton{
             simpleButton.setTitleColor(UIColor.white, for: .highlighted)
             
             //サイズ
-            simpleButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+            simpleButton.frame = CGRect(x: 0, y: 0, width: 80, height: 50)
             
             var x:Int
             var y:Int
-            if i < 6 {
-                x = (i - 1) * 60
-                y = 0
-            } else if i < 11 {
-                x = (i - 6) * 60
-                y = 60
+            if i < 4 {
+                x = (i-1)*110+60
+                y = 25
+            } else if i < 7 {
+                x = (i-4)*110+60
+                y = 85
+            } else if i < 10 {
+                x = (i-7)*110+60
+                y = 145
+            } else if i < 13 {
+                x = (i-10)*110+60
+                y = 205
             } else if i < 16 {
-                x = (i - 11) * 60
-                y = 120
+                x = (i-13)*110+60
+                y = 265
+            } else if i < 19 {
+                x = (i-16)*110+60
+                y = 325
             } else {
-                x = (i - 16) * 60
-                y = 180
+                x = (i-19)*110+60
+                y = 385
             }
+            
             //配置場所
             simpleButton.layer.position = CGPoint(x: x, y: y)
             
