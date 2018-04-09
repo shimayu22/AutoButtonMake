@@ -11,10 +11,10 @@ import UIKit
 
 class MakeButton{
     
-    var gamen:UIViewController
+    var gamen:UIView
     var count:Int
     
-    init(gamen:UIViewController,count:Int){
+    init(gamen:UIView,count:Int){
         self.gamen = gamen
         self.count = count
     }
@@ -43,17 +43,17 @@ class MakeButton{
             var x:Int
             var y:Int
             if i < 6 {
-                x = 20 + (i - 1) * 60
-                y = 100
+                x = (i - 1) * 60
+                y = 0
             } else if i < 11 {
-                x = 20 + (i - 6) * 60
-                y = 200
+                x = (i - 6) * 60
+                y = 60
             } else if i < 16 {
-                x = 20 + (i - 11) * 60
-                y = 300
+                x = (i - 11) * 60
+                y = 120
             } else {
-                x = 20 + (i - 10) * 60
-                y = 400
+                x = (i - 16) * 60
+                y = 180
             }
             //配置場所
             simpleButton.layer.position = CGPoint(x: x, y: y)
@@ -64,7 +64,7 @@ class MakeButton{
             simpleButton.addTarget(self, action: #selector(ViewController.pushButton(_:)), for: .touchDown)
             
             //ボタン表示
-            gamen.view.addSubview(simpleButton)
+            gamen.addSubview(simpleButton)
             
         }
     }

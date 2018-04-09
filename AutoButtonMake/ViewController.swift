@@ -10,10 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var koko: UIScrollView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let a = MakeButton(gamen: self, count: 10)
+        let a = MakeButton(gamen: self.koko, count: 20)
         a.makeButton()
         
         // Do any additional setup after loading the view, typically from a nib.
