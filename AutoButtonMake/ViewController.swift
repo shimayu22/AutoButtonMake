@@ -9,16 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var koko: UIScrollView!
-    @IBOutlet weak var Nobase: UIView!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let a = MakeButton(gamen: self.Nobase, count: 22)
+        let a = MakeButton(base: self, count: 20)
         a.makeButton()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
         
     override func didReceiveMemoryWarning() {

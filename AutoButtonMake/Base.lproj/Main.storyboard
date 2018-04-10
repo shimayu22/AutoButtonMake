@@ -17,40 +17,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wau-8o-6f7">
-                                <rect key="frame" x="16" y="158" width="343" height="350"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0po-Xv-Gq0">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="900"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="900" id="8Oc-Xj-VkQ"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="DFv-D3-T20"/>
-                                    <constraint firstAttribute="bottom" secondItem="0po-Xv-Gq0" secondAttribute="bottom" id="DUD-nj-DBh"/>
-                                    <constraint firstItem="0po-Xv-Gq0" firstAttribute="centerX" secondItem="wau-8o-6f7" secondAttribute="centerX" id="OiE-81-bst"/>
-                                    <constraint firstAttribute="height" constant="350" id="U0K-A0-Fuo"/>
-                                    <constraint firstItem="0po-Xv-Gq0" firstAttribute="top" secondItem="wau-8o-6f7" secondAttribute="top" id="VlG-bT-6yo"/>
-                                    <constraint firstAttribute="trailing" secondItem="0po-Xv-Gq0" secondAttribute="trailing" id="pgX-R7-8mK"/>
-                                    <constraint firstItem="0po-Xv-Gq0" firstAttribute="leading" secondItem="wau-8o-6f7" secondAttribute="leading" id="sYl-rK-Bf0"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="wau-8o-6f7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="478-go-E3f"/>
-                            <constraint firstItem="wau-8o-6f7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L1p-aI-mmT"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="Nobase" destination="0po-Xv-Gq0" id="HFo-C8-ALt"/>
-                        <outlet property="koko" destination="wau-8o-6f7" id="B0P-Eg-Urk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

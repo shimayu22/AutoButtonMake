@@ -11,16 +11,28 @@ import UIKit
 
 class MakeButton{
     
-    var gamen:UIView
-    var count:Int
-    
-    init(gamen:UIView,count:Int){
-        self.gamen = gamen
+    let base:UIViewController
+    let count:Int
+
+    init(base:UIViewController,count:Int){
+        self.base = base
         self.count = count
     }
     
     func makeButton(){
+        //UIScrollViewを作る
+        let scrollView:UIScrollView = UIScrollView()
+        scrollView.frame.size = CGSize(width: 340, height: 300)
+        scrollView.center = base.view.center
         
+        let w:Int
+        let a:Int = count/3
+        
+        w = (a + 1) * 60
+        
+        scrollView.contentSize = CGSize(width: 340, height: w)
+        
+        //ボタンを作る
         for i in 1 ... count {
             //ボタンの初期化
             let simpleButton = UIButton()
@@ -40,8 +52,8 @@ class MakeButton{
             //サイズ
             simpleButton.frame = CGRect(x: 0, y: 0, width: 80, height: 50)
             
-            var x:Int
-            var y:Int
+            let x:Int
+            let y:Int
             if i < 4 {
                 x = (i-1)*110+60
                 y = 25
@@ -74,8 +86,10 @@ class MakeButton{
             simpleButton.addTarget(self, action: #selector(ViewController.pushButton(_:)), for: .touchDown)
             
             //ボタン表示
-            gamen.addSubview(simpleButton)
+            scrollView.addSubview(simpleButton)
             
         }
+        
+        base.view.addSubview(scrollView)
     }
 }
