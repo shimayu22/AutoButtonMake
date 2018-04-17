@@ -22,23 +22,22 @@ class MakeButton{
     func makeButton(){
         //UIScrollViewを作る
         let scrollView:UIScrollView = UIScrollView()
-        scrollView.frame.size = CGSize(width: 340, height: 300)
+        scrollView.frame.size = CGSize(width: kViewWidth, height: kViewHeight)
         scrollView.center = base.view.center
+        scrollView.backgroundColor = UIColor.lightGray
         
-        let w:Int
         let a:Int = count/3
+        let h:Int = (a + 1) * (kButtonHeight + kViewMargin)
         
-        w = (a + 1) * 60
-        
-        scrollView.contentSize = CGSize(width: 340, height: w)
+        scrollView.contentSize = CGSize(width: kViewWidth, height: h)
         
         //ボタンを作る
-        for i in 1 ... count {
+        for i in 0 ... count - 1 {
             //ボタンの初期化
             let simpleButton = UIButton()
             
             //表示する文字
-            simpleButton.setTitle(String(i), for: .normal)
+            simpleButton.setTitle(String(i+1), for: .normal)
             
             //ボタンの文字色
             simpleButton.setTitleColor(UIColor.blue, for: .normal)
@@ -50,42 +49,26 @@ class MakeButton{
             simpleButton.setTitleColor(UIColor.white, for: .highlighted)
             
             //サイズ
-            simpleButton.frame = CGRect(x: 0, y: 0, width: 80, height: 50)
+            simpleButton.frame = CGRect(x: 0, y: 0, width: kButtonWidth, height: kButtonHeight)
             
-            let x:Int
-            let y:Int
-            if i < 4 {
-                x = (i-1)*110+60
-                y = 25
-            } else if i < 7 {
-                x = (i-4)*110+60
-                y = 85
-            } else if i < 10 {
-                x = (i-7)*110+60
-                y = 145
-            } else if i < 13 {
-                x = (i-10)*110+60
-                y = 205
-            } else if i < 16 {
-                x = (i-13)*110+60
-                y = 265
-            } else if i < 19 {
-                x = (i-16)*110+60
-                y = 325
-            } else {
-                x = (i-19)*110+60
-                y = 385
-            }
+            
+            let b:Int = (i/3) * 3 //横位置の補正（3つ毎に折り返す）
+            let x:Int = (i - b) * 120 + kButtonMargin //ボタンの横位置
+            let y:Int = (i/3) * 100 + kButtonMargin//ボタンの縦位置
             
             //配置場所
             simpleButton.layer.position = CGPoint(x: x, y: y)
             
             //tagの番号
-            simpleButton.tag = i
+            simpleButton.tag = i+1
             
+            //角丸を設定
+            simpleButton.layer.cornerRadius = 10
+            
+            //ボタンを押した時の挙動
             simpleButton.addTarget(self, action: #selector(ViewController.pushButton(_:)), for: .touchDown)
             
-            //ボタン表示
+            //ボタン表示（Viewに追加）
             scrollView.addSubview(simpleButton)
             
         }
