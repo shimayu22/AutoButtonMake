@@ -9,8 +9,13 @@
 import Foundation
 
 let kButtonWidth = 100
-let kButtonHeight = 70
-let kButtonMargin = 50
+let kButtonHeight = 50
+let kButtonWidthMargin = 50
+let kButtonHeightMargin = 30
+
+
+let kPositionWidth = 120
+let kPositionHeight = 70
 
 let kViewWidth = 340
 let kViewHeight = 300

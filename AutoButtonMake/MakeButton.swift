@@ -51,10 +51,9 @@ class MakeButton{
             //サイズ
             simpleButton.frame = CGRect(x: 0, y: 0, width: kButtonWidth, height: kButtonHeight)
             
-            
             let b:Int = (i/3) * 3 //横位置の補正（3つ毎に折り返す）
-            let x:Int = (i - b) * 120 + kButtonMargin //ボタンの横位置
-            let y:Int = (i/3) * 100 + kButtonMargin//ボタンの縦位置
+            let x:Int = (i - b) * kPositionWidth + kButtonWidthMargin //ボタンの横位置
+            let y:Int = (i/3) * kPositionHeight + kButtonHeightMargin//ボタンの縦位置
             
             //配置場所
             simpleButton.layer.position = CGPoint(x: x, y: y)
