@@ -1,0 +1,11 @@
+# AutoButtonMake
+Swiftでボタンを自動生成したかった
+
+MakeButton.swift
+まずScrolleViewを生成する
+次にScrolleViewに引数のボタンの数に応じて自動的にボタンを生成する
+
+３つごとに改行している
+
+ボタンのサイズや位置はConstants.swiftで指定している
+
